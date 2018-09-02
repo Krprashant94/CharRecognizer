@@ -5,9 +5,12 @@ __pycache__/
 
 # C extensions
 *.so
+*.bin
 
 # Distribution / packaging
 .Python
+.ipynb_checkpoints/
+English Font Image/
 extracted/
 build/
 develop-eggs/
