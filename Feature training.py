@@ -16,7 +16,7 @@ import numpy as np
 import cv2
 import os
 import re
-
+import random
 
 # In[ ]:
 
@@ -91,7 +91,12 @@ class Nural_network:
     
     def Train(self, path='extracted'):
         self.isTrained = True
-        for i in range(1, 9):
+        sequence = [1, 2, 3, 4, 5, 6, 7, 8]
+        random.shuffle(sequence)
+        print('-----------')
+        print(sequence)
+        print('-----------')
+        for i in sequence:
 #             Total 64 file 1016/8 = 127
             print("Trainning Set : "+str(i))
     
@@ -103,7 +108,7 @@ class Nural_network:
             self.valid_data = self.__shape(self.valid_data)
             print(self.train_data.shape)
             
-            self.model.fit(self.train_data, self.train_labels, validation_data=(self.valid_data, self.valid_labels), epochs=10, batch_size=10)
+            self.model.fit(self.train_data, self.train_labels, validation_data=(self.valid_data, self.valid_labels), epochs=1, batch_size=10)
             self.save()
         
     def load(self, path="feature.bin"):
@@ -140,7 +145,7 @@ nn.load()
 
 # In[ ]:
 
-for i in range(1000):
+for i in range(10):
     print("Loop : "+str(i))
     nn.Train()
 
