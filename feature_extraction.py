@@ -31,7 +31,7 @@ import cv2
 
 class Extraction:
     """
-        Frature extraction module  for extracting top 10 frature on an image
+    Frature extraction module  for extracting top 10 frature on an image
     """
     def __init__(self, sample_folder='English Font Image', max_feture=10, bundle_size=127):
         """
@@ -206,14 +206,13 @@ class Extraction:
 
 if __name__ == '__main__':
     # Create a instance of extraction module
-    E = Extraction()
+    e = Extraction()
     # Extract the feture
-    E.extract()
+    e.extract()
 
 
     # In[4]:
 
 
     # Clean the veriable
-    del E
-    
+    del e
