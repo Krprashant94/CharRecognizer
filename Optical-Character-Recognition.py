@@ -28,7 +28,7 @@ from sklearn.preprocessing import scale
 
 class Nural_network:
     """
-        RCNN nural network module
+    RCNN nural network module
     """
     def __init__(self, ):
         """
